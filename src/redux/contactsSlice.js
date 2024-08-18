@@ -11,7 +11,7 @@ const fetchError = (state, action) => {
   state.error = action.payload;
 };
 const contactsSlice = createSlice({
-  name: "contacts",
+  name: "campers",
   initialState: {
     items: [],
     loading: false,

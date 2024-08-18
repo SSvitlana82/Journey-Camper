@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1>Journey-Camper</h1>
       <ContactForm />
       <SearchBox />
       <ContactList />
