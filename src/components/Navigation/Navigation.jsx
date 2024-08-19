@@ -5,10 +5,16 @@ import { useState } from "react";
 const Navigation = ({}) => {
   return (
     <div>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog </NavLink>
-        <NavLink to="/favorites">Favorite camper</NavLink>
+      <nav className={style.navContainer}>
+        <NavLink className={style.navLink} to="/">
+          Home
+        </NavLink>
+        <NavLink className={style.navLink} to="/catalog">
+          Catalog{" "}
+        </NavLink>
+        <NavLink className={style.navLink} to="/favorites">
+          Favorite camper
+        </NavLink>
       </nav>
     </div>
   );

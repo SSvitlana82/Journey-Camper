@@ -1,0 +1,76 @@
+.home {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("/public/rvland-rus-campers-10-min.png") no-repeat center
+    center/cover; /* Встановлюємо фон */
+  height: 100%; /* Встановлюємо висоту на весь екран */
+  width: 100%;
+  color: #333;
+}
+
+.header {
+  background: rgba(
+    76,
+    175,
+    80,
+    0.8
+  ); /* Додаємо прозорий фон для тексту, щоб він був видимим на фоні */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Додаємо прозорий білий фон для тексту */
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.content h2 {
+  font-size: 2em;
+  color: #4caf50;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  background-color: #45a049;
+}

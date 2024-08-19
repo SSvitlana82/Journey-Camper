@@ -1,0 +1,25 @@
+.navContainer {
+  background-color: #333; /* Темний фон для навігації */
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navLink {
+  color: white; /* Колір тексту */
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.navLink:hover {
+  background-color: #4caf50; /* Зелений фон при наведенні */
+  border-radius: 5px; /* Закруглення країв */
+}
+
+.activeLink {
+  background-color: #4caf50; /* Зелений фон для активної сторінки */
+  border-radius: 5px;
+}
