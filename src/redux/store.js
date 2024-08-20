@@ -1,7 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducer from "location";
+import camperReducer from "./campers/slice";
+import favoriteReducer from "./favorites/slice";
 export default configureStore({
-  reducerName: reducer,
-  reducerName: reducer,
-  reducerName: reducer,
+  reducer: {
+    campers: camperReducer,
+    favorite: favoriteReducer,
+  },
 });

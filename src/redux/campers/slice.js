@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { campersGet } from "./operations";
 
 const initialState = {
   items: [],
@@ -9,15 +10,22 @@ const initialState = {
 export const camperSlice = createSlice({
   name: "campers",
   initialState,
-  reducers: {
-    setUserName(state, { payload }) {
-      state.username = payload;
-    },
-    setRegistered(state, { payload }) {
-      state.registered = payload;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(campersGet.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(campersGet.pending, (state, { payload }) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(campersGet.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
+      });
   },
 });
 
-export const {} = name.actions;
-export default userSlice.reducer;
+export default camperSlice.reducer;
