@@ -4,11 +4,11 @@ import CamperCard from "../CamperCard/CamperCard";
 
 const CamperList = ({ array }) => {
   return (
-    <div>
-      <ul>
+    <div className={style.container}>
+      <ul className={style.listContainer}>
         {array.map((item) => {
           return (
-            <li key={item._id}>
+            <li className={style.itemContainer} key={item._id}>
               <CamperCard data={item} />
             </li>
           );

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { campersGet } from "../../redux/campers/operations";
 import CamperList from "../../components/CamperList/CamperList";
 import { selectCampers } from "../../redux/campers/selectors";
+import Filters from "../../components/Filters/Filters";
 
 const CatalogPage = ({}) => {
   const dispatch = useDispatch();
@@ -14,9 +15,10 @@ const CatalogPage = ({}) => {
   }, []);
 
   return (
-    <div>
-      <CamperList array={arrayCampers} />
-    </div>
+    <main className={style.containerMain}>
+      <Filters /* className={style.filter} */ />
+      <CamperList array={arrayCampers} /* className={style.camperList} */ />
+    </main>
   );
 };
 

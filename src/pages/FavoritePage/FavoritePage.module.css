@@ -1,0 +1,9 @@
+.containerMain {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 100px 64px;
+  margin: 0 auto;
+  background-color: #ffff;
+  width: 1440px;
+}

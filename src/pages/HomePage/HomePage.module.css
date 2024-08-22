@@ -1,4 +1,12 @@
-.home {
+/* .containerMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 64px;
+  margin: 0 auto;
+  width: 1440px;
+} */
+
+.containerMain {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;

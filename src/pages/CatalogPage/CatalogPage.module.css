@@ -1,0 +1,21 @@
+.containerMain {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffff;
+  padding: 100px 64px;
+  margin: 0 auto;
+
+  width: 1440px;
+}
+/* .filter {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.camperList {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+ */

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const HomePage = ({}) => {
   return (
-    <div className={style.home}>
+    <main className={style.containerMain}>
       <header className={style.header}>
         <h1>Camper Rentals in Ukraine</h1>
       </header>
@@ -26,7 +26,7 @@ const HomePage = ({}) => {
           heating, and air conditioning systems.
         </p>
       </div>
-    </div>
+    </main>
   );
 };
 
