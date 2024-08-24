@@ -14,7 +14,6 @@ const CamperList = ({ array }) => {
           );
         })}
       </ul>
-      ;
     </div>
   );
 };

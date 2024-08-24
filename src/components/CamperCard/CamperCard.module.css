@@ -2,50 +2,78 @@
   display: flex;
   flex-direction: row;
   border: 1px solid #e0e0e0;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   background-color: #ffffff;
-  max-width: 888px;
+  width: 888px;
   height: 358px;
   padding: 24px 24px;
-  gap: 24px;
-  border: 1px 0px 0px 0px;
+  box-sizing: border-box;
 }
-.cardContainer {
+.cardImg {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  min-width: 290px;
+  height: 310px;
+  margin-right: 24px;
+  border-radius: 10px;
 }
 
+/* .cardContainer {
+  display: flex;
+  flex-direction: row;
+} */
+
 .image {
-  width: 290px;
   height: 310px;
-  border-radius: 10px;
+
+  object-fit: cover;
 }
 
 .cardContent {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24 px;
+  width: 526px;
+  height: 310px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
 }
 .name {
-  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
+  line-height: 125%;
+  color: #101828;
 }
 
 .price {
   font-size: 18px;
   font-weight: 700;
   color: #333333;
+  margin: 0;
 }
 
 .icon {
   width: 24px;
   height: 24px;
   fill: #ff5a5f;
+  stroke: #f5a623;
+  color: black;
 }
-
+.block {
+  display: flex;
+  gap: 10px;
+}
 .favoriteButton {
   background: none;
   border: none;

@@ -16,8 +16,8 @@ const CatalogPage = ({}) => {
 
   return (
     <main className={style.containerMain}>
-      <Filters /* className={style.filter} */ />
-      <CamperList array={arrayCampers} /* className={style.camperList} */ />
+      <Filters />
+      <CamperList array={arrayCampers} />
     </main>
   );
 };

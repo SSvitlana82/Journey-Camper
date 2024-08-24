@@ -4,10 +4,11 @@ import style from "./Filters.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import Icon from "../Icon/Icon";
+import InputLocation from "../customsComponents/InputLocation/InputLocation";
 const categoriesEquipment = [
   {
     title: "AC",
-    icon: "ac",
+    icon: "acCon",
   },
   {
     title: "Automatic",
@@ -43,6 +44,7 @@ const categoriesType = [
 const Filters = ({}) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const dispatch = useDispatch();
+  const [location, setLocation] = useState("");
 
   const handleCheckboxChange = (e) => {
     const { checked } = e.currentTarget;
@@ -63,6 +65,7 @@ const Filters = ({}) => {
   };
   return (
     <div className={style.container}>
+      <InputLocation value={location} setValue={setLocation} />
       <p className={style.filter}>Filters</p>
       <div className={style.filterCategory}>
         <h3 className={style.nameFilter}>Vehicle equipment</h3>

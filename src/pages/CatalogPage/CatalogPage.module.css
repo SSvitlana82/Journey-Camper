@@ -1,8 +1,9 @@
 .containerMain {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   background-color: #ffff;
-  padding: 100px 64px;
+  padding: 64px;
   margin: 0 auto;
 
   width: 1440px;
