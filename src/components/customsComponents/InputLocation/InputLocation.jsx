@@ -3,10 +3,17 @@ import { useState } from "react";
 import Icon from "../../Icon/Icon";
 const InputLocation = ({ value, setValue }) => {
   return (
-    <div>
-      <p>
-        <Icon id="{icon}" />
-      </p>
+    <div className={style.blockLocation}>
+      <Icon id="location" />
+
+      <input
+        placeholder="Kyiv, Ukraine"
+        className={style.input}
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
     </div>
   );
 };

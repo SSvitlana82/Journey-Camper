@@ -39,7 +39,7 @@ const CamperCard = ({ data }) => {
         <div className={style.features}>
           <span>
             <svg className={style.icon}>
-              <use href="#icon-users"></use>
+              <use href="#users"></use>
             </svg>
             {data.passengers} adults
           </span>

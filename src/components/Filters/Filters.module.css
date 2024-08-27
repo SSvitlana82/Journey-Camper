@@ -4,6 +4,13 @@
   width: 360px;
   align-items: stretch;
 }
+.blockLoc {
+  display: flex;
+  flex-direction: column;
+}
+.location {
+  text-align: left;
+}
 .filter {
   font-size: 16px;
   font-weight: 500;

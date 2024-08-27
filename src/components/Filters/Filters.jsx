@@ -31,14 +31,17 @@ const categoriesType = [
   {
     title: "Van",
     icon: "camper",
+    id: "panelTruck",
   },
   {
     title: "Fully Integrated",
     icon: "camper1",
+    id: "fullyIntegrated",
   },
   {
     title: "Alcove",
     icon: "camper2",
+    id: "alcove",
   },
 ];
 const Filters = ({}) => {
@@ -49,7 +52,7 @@ const Filters = ({}) => {
   const handleCheckboxChange = (e) => {
     const { checked } = e.currentTarget;
     const value = e.currentTarget.getAttribute("value");
-    console.log(value, checked);
+    console.log(value);
     if (!checked) {
       setSelectedCategories([...selectedCategories, value]);
     } else {
@@ -60,19 +63,22 @@ const Filters = ({}) => {
     console.log(selectedCategories, e);
   };
   const onSearchClick = () => {
-    const data = { selectedCategories };
+    const data = { selectedCategories, location };
     dispatch(campersGet(data));
   };
   return (
     <div className={style.container}>
-      <InputLocation value={location} setValue={setLocation} />
+      <div className={style.blockLoc}>
+        <p className={style.location}>Location</p>
+        <InputLocation value={location} setValue={setLocation} />
+      </div>
       <p className={style.filter}>Filters</p>
       <div className={style.filterCategory}>
         <h3 className={style.nameFilter}>Vehicle equipment</h3>
         <ul className={style.listF}>
           {categoriesEquipment.map((category, i) => {
             const isActive = selectedCategories.some(
-              (el) => el === category.title
+              (el) => el === category.id
             );
             return (
               <li key={i} className={style.itemF}>
@@ -80,6 +86,7 @@ const Filters = ({}) => {
                   handleCheckboxChange={handleCheckboxChange}
                   title={category.title}
                   icon={category.icon}
+                  id={category.id}
                   isActive={isActive}
                 />
               </li>
@@ -92,7 +99,7 @@ const Filters = ({}) => {
         <ul className={style.listF}>
           {categoriesType.map((category, i) => {
             const isActive = selectedCategories.some(
-              (el) => el === category.title
+              (el) => el === category.id
             );
             return (
               <li key={i} className={style.itemF}>
@@ -100,6 +107,7 @@ const Filters = ({}) => {
                   handleCheckboxChange={handleCheckboxChange}
                   title={category.title}
                   icon={category.icon}
+                  id={category.id}
                   isActive={isActive}
                 />
               </li>

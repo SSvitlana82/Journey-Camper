@@ -1,14 +1,22 @@
 import Icon from "../../Icon/Icon";
 import style from "./CheckboxFilter.module.css";
+import clsx from "clsx";
 import { useState } from "react";
 
-const CheckboxFilter = ({ handleCheckboxChange, title, icon, isActive }) => {
+const CheckboxFilter = ({
+  handleCheckboxChange,
+  title,
+  icon,
+  isActive,
+  id,
+}) => {
+  const myClass = clsx(style.checkBox, isActive && style.active);
   return (
     <div
       onClick={handleCheckboxChange}
-      value={title}
+      value={id}
+      className={myClass}
       checked={isActive}
-      className={style.checkBox}
     >
       <Icon className={style.iconFilter} id={icon} />
       <p className={style.titleIcon}>{title}</p>
