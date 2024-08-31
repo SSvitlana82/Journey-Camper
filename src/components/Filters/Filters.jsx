@@ -5,26 +5,67 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import Icon from "../Icon/Icon";
 import InputLocation from "../customsComponents/InputLocation/InputLocation";
+import Button from "../customsComponents/Button/Button";
 const categoriesEquipment = [
   {
     title: "AC",
     icon: "acCon",
+    id: "airConditioner",
   },
   {
     title: "Automatic",
     icon: "automatic",
+    id: "automatic",
   },
   {
     title: "Kitchen",
     icon: "kitchen",
+    id: "kitchen",
   },
   {
     title: "TV",
     icon: "tv",
+    id: "TV",
   },
   {
     title: "Shower/WC",
     icon: "ion_water-outline",
+    id: "shower",
+  },
+  {
+    title: "CD",
+    icon: "icon-park-outline_cd",
+    id: "CD",
+  },
+  {
+    title: "Toilet",
+    icon: "mingcute_toilet-paper-line",
+    id: "toilet",
+  },
+  {
+    title: "Gas",
+    icon: "mdi_gas",
+    id: "gas",
+  },
+  {
+    title: "Radio",
+    icon: "solar_radio-linear",
+    id: "radio",
+  },
+  {
+    title: "Bed",
+    icon: "bed",
+    id: "beds",
+  },
+  {
+    title: "Freezer",
+    icon: "arcticons_freezer",
+    id: "freezer",
+  },
+  {
+    title: "microwave",
+    icon: "streamline_microwave",
+    id: "microwave",
   },
 ];
 const categoriesType = [
@@ -45,25 +86,45 @@ const categoriesType = [
   },
 ];
 const Filters = ({}) => {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategoriesForm, setSelectedCategoriesForm] = useState([]);
+  const [selectedCategoriesDetails, setSelectedCategoriesDetails] = useState(
+    []
+  );
   const dispatch = useDispatch();
   const [location, setLocation] = useState("");
 
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChangeForm = (e) => {
     const { checked } = e.currentTarget;
     const value = e.currentTarget.getAttribute("value");
-    console.log(value);
+
     if (!checked) {
-      setSelectedCategories([...selectedCategories, value]);
+      setSelectedCategoriesForm([...selectedCategoriesForm, value]);
     } else {
-      setSelectedCategories(
-        selectedCategories.filter((category) => category !== value)
+      setSelectedCategoriesForm(
+        selectedCategoriesForm.filter((category) => category !== value)
       );
     }
-    console.log(selectedCategories, e);
   };
+
+  const handleCheckboxChangeDetails = (e) => {
+    const { checked } = e.currentTarget;
+    const value = e.currentTarget.getAttribute("value");
+
+    if (!checked) {
+      setSelectedCategoriesDetails([...selectedCategoriesDetails, value]);
+    } else {
+      setSelectedCategoriesDetails(
+        selectedCategoriesDetails.filter((category) => category !== value)
+      );
+    }
+  };
+
   const onSearchClick = () => {
-    const data = { selectedCategories, location };
+    const data = {
+      selectedCategoriesForm,
+      selectedCategoriesDetails,
+      location,
+    };
     dispatch(campersGet(data));
   };
   return (
@@ -77,13 +138,15 @@ const Filters = ({}) => {
         <h3 className={style.nameFilter}>Vehicle equipment</h3>
         <ul className={style.listF}>
           {categoriesEquipment.map((category, i) => {
-            const isActive = selectedCategories.some(
-              (el) => el === category.id
-            );
+            const isActive = selectedCategoriesDetails.some((el) => {
+              console.log(el, category);
+              return el === category.id;
+            });
+
             return (
               <li key={i} className={style.itemF}>
                 <CheckboxFilter
-                  handleCheckboxChange={handleCheckboxChange}
+                  handleCheckboxChange={handleCheckboxChangeDetails}
                   title={category.title}
                   icon={category.icon}
                   id={category.id}
@@ -98,13 +161,13 @@ const Filters = ({}) => {
         <h3 className={style.nameFilter}>Vehicle type</h3>
         <ul className={style.listF}>
           {categoriesType.map((category, i) => {
-            const isActive = selectedCategories.some(
+            const isActive = selectedCategoriesForm.some(
               (el) => el === category.id
             );
             return (
               <li key={i} className={style.itemF}>
                 <CheckboxFilter
-                  handleCheckboxChange={handleCheckboxChange}
+                  handleCheckboxChange={handleCheckboxChangeForm}
                   title={category.title}
                   icon={category.icon}
                   id={category.id}
@@ -115,9 +178,7 @@ const Filters = ({}) => {
           })}
         </ul>
       </div>
-      <button onClick={onSearchClick} className={style.btnF}>
-        Search
-      </button>
+      <Button onClick={onSearchClick}>Search</Button>
     </div>
   );
 };

@@ -13,9 +13,10 @@ export const camperSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(campersGet.fulfilled, (state, action) => {
+        console.log(action.payload);
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+        state.items = action.payload.data.data;
       })
       .addCase(campersGet.pending, (state, { payload }) => {
         state.isLoading = true;

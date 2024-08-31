@@ -2,9 +2,19 @@ import style from "./CamperCard.module.css";
 import { useState } from "react";
 import { IoStarOutline } from "react-icons/io5";
 import svg from "../../assets/symbol-defs.svg";
+import Button from "../customsComponents/Button/Button";
+import ModalForm from "../ModalForm/ModalForm";
 
 const CamperCard = ({ data }) => {
-  console.log(data);
+  const [modalState, setModalState] = useState(false);
+
+  const showModal = () => {
+    setModalState(true);
+  };
+  const closeModal = () => {
+    setModalState(false);
+  };
+
   return (
     <div className={style.cardMain}>
       <div className={style.cardImg}>
@@ -75,9 +85,10 @@ const CamperCard = ({ data }) => {
           </span>
         </div>
         <div>
-          <button className={style.button}>Show more</button>
+          <Button onClick={showModal}>Show more</Button>
         </div>
       </div>
+      {modalState && <ModalForm closeModal={closeModal} itemCamper={data} />}
     </div>
   );
 };

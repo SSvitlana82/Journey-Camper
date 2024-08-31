@@ -1,0 +1,47 @@
+.backdrope {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.263);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+}
+.modal {
+  min-width: 982px;
+  min-height: 720px;
+  border-radius: 20px;
+  background-color: white;
+}
+.close {
+  width: 32px;
+  height: 32px;
+  fill: black;
+  color: black;
+  stroke: black;
+}
+
+.headerModal {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+}
+.priceBox {
+  display: flex;
+}
+
+.scroll {
+  overflow: auto;
+  max-height: 100%;
+}
