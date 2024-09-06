@@ -1,0 +1,10 @@
+.active {
+  fill: rgba(255, 197, 49, 1);
+}
+.deActive {
+  fill: rgba(242, 244, 247, 1);
+}
+
+.conteiner {
+  display: flex;
+}

@@ -3,19 +3,25 @@
   height: 100vh;
   position: fixed;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.263);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   left: 0;
   top: 0;
+  background-attachment: fixed;
+  z-index: 1000;
 }
+
 .modal {
-  min-width: 982px;
-  min-height: 720px;
+  width: 982px;
+  max-height: 720px;
   border-radius: 20px;
   background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тінь для модального вікна */
+  overflow: hidden; /* Заборона виходу контенту за межі модального вікна */
 }
+
 .close {
   width: 32px;
   height: 32px;
@@ -27,21 +33,45 @@
 .headerModal {
   display: flex;
   flex-direction: column;
+  margin: 25px 25px 0 25px;
+  gap: 8px;
+  /* padding: 25px; */
 }
+
 .name {
   display: flex;
-  width: 100%;
+  width: auto;
   justify-content: space-between;
+  align-items: center; /*додала*/
+}
+
+.btn {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  /* padding: 0; */
 }
 
 .info {
   display: flex;
+
+  align-items: center;
+  color: #7c7c7c; /* Сірий колір для тексту */
 }
+
 .priceBox {
   display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .scroll {
   overflow: auto;
-  max-height: 100%;
+  max-height: 562px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
 }

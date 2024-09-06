@@ -1,0 +1,18 @@
+.list {
+  display: inline-table;
+  padding: 0;
+  margin: auto;
+  /* gap: 14px; */
+  min-width: 430px;
+}
+.listItem {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  min-width: 430px;
+  height: 24px;
+  padding: 7px 0;
+}
+.name {
+  display: flex;
+}

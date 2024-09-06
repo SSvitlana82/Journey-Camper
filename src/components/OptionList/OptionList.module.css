@@ -1,0 +1,23 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  color: none;
+  fill: none;
+  stroke: black;
+  gap: 3px;
+  padding: 3px 0;
+}
+.iconBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  gap: 2px;
+  border-radius: 100px;
+  border: 1px solid black;
+  height: 44px;
+  padding: 0 6px;
+  min-width: 88px;
+  border: none;
+  background-color: rgba(242, 244, 247, 1);
+}

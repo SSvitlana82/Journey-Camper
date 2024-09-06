@@ -4,6 +4,8 @@ import { IoStarOutline } from "react-icons/io5";
 import svg from "../../assets/symbol-defs.svg";
 import Button from "../customsComponents/Button/Button";
 import ModalForm from "../ModalForm/ModalForm";
+import Icon from "../Icon/Icon";
+import OptionList from "../OptionList/OptionList";
 
 const CamperCard = ({ data }) => {
   const [modalState, setModalState] = useState(false);
@@ -30,9 +32,7 @@ const CamperCard = ({ data }) => {
           <div className={style.block}>
             <p className={style.price}>€{data.price.toFixed(2)}</p>
             <button className={style.favoriteButton}>
-              <svg className={style.icon}>
-                <use href={`${svg}#icon-heart`}></use>
-              </svg>
+              <Icon className={style.iconHeart} id="heart"></Icon>
             </button>
           </div>
         </div>
@@ -46,43 +46,9 @@ const CamperCard = ({ data }) => {
         <div>
           <p className={style.textContainer}>{data.description}</p>
         </div>
+
         <div className={style.features}>
-          <span>
-            <svg className={style.icon}>
-              <use href="#users"></use>
-            </svg>
-            {data.passengers} adults
-          </span>
-          <span>
-            <svg className={style.icon}>
-              <use href="#icon-settings"></use>
-            </svg>
-            {data.transmission}
-          </span>
-          <span>
-            <svg className={style.icon}>
-              <use href="#icon-fuel"></use>
-            </svg>
-            {data.fuel}
-          </span>
-          <span>
-            <svg className={style.icon}>
-              <use href="#icon-kitchen"></use>
-            </svg>
-            {data.kitchen ? "Kitchen" : "No Kitchen"}
-          </span>
-          <span>
-            <svg className={style.icon}>
-              <use href="#icon-bed"></use>
-            </svg>
-            {data.beds} beds
-          </span>
-          <span>
-            <svg className={style.icon}>
-              <use href="#icon-ac"></use>
-            </svg>
-            {data.ac ? "AC" : "No AC"}
-          </span>
+          <OptionList detailsOption={data.details} maxLength={6} />
         </div>
         <div>
           <Button onClick={showModal}>Show more</Button>

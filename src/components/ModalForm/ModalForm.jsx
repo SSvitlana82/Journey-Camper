@@ -2,18 +2,24 @@ import Icon from "../Icon/Icon";
 import ModalDescription from "../ModalDescription/ModalDescription";
 import Modalnfo from "../Modalnfo/Modalnfo";
 import style from "./ModalForm.module.css";
-import { useState } from "react";
+import { useEffect } from "react";
 import { IoStarOutline } from "react-icons/io5";
 
 const ModalForm = ({ itemCamper, closeModal }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <div className={style.backdrope}>
       <div className={style.modal}>
         <section className={style.headerModal}>
           <div className={style.name}>
             <h2>{itemCamper.name}</h2>
-            <button onClick={closeModal}>
-              <Icon className={style.close} id="route" />
+            <button onClick={closeModal} className={style.btn}>
+              <Icon className={style.close} id="close" />
             </button>
           </div>
           <div className={style.info}>

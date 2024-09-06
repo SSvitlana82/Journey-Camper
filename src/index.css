@@ -25,13 +25,14 @@ a:hover {
 body {
   font-family: "Inter", sans-serif;
   color: #213547;
-  background-color: #ffffff;
+  /*   background-color: #ffffff; */
   margin: 0 auto;
 
   background-size: cover; /* Масштабування зображення, щоб покрити весь екран */
   background-position: center; /* Центрування зображення */
   background-repeat: no-repeat; /* Забороняє повторення зображення */
   height: 100vh; /* Висота на всю висоту вікна браузера */
+  background-attachment: fixed; /*додала */
 }
 
 h1 {

@@ -15,7 +15,7 @@ const categoriesEquipment = [
   {
     title: "Automatic",
     icon: "automatic",
-    id: "automatic",
+    id: "transmission",
   },
   {
     title: "Kitchen",
@@ -30,7 +30,7 @@ const categoriesEquipment = [
   {
     title: "Shower/WC",
     icon: "ion_water-outline",
-    id: "shower",
+    id: "bathroom",
   },
   {
     title: "CD",
@@ -66,6 +66,11 @@ const categoriesEquipment = [
     title: "microwave",
     icon: "streamline_microwave",
     id: "microwave",
+  },
+  {
+    title: "water",
+    icon: "water",
+    id: "water",
   },
 ];
 const categoriesType = [
@@ -148,7 +153,7 @@ const Filters = ({}) => {
                 <CheckboxFilter
                   handleCheckboxChange={handleCheckboxChangeDetails}
                   title={category.title}
-                  icon={category.icon}
+                  icon={category.id}
                   id={category.id}
                   isActive={isActive}
                 />
@@ -169,7 +174,7 @@ const Filters = ({}) => {
                 <CheckboxFilter
                   handleCheckboxChange={handleCheckboxChangeForm}
                   title={category.title}
-                  icon={category.icon}
+                  icon={category.id}
                   id={category.id}
                   isActive={isActive}
                 />

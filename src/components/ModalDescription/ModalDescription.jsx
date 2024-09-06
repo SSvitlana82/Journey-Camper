@@ -8,24 +8,26 @@ const ModalDescription = ({ itemCamper }) => {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          setFeatures(true);
-        }}
-      >
-        Features
-      </button>
-      <button
-        onClick={() => {
-          setFeatures(false);
-        }}
-      >
-        Reviews
-      </button>
+      <div className={style.conteiner}>
+        <button
+          onClick={() => {
+            setFeatures(true);
+          }}
+        >
+          <h3 className={style.name}>Features</h3>
+        </button>
+        <button
+          onClick={() => {
+            setFeatures(false);
+          }}
+        >
+          <h3 className={style.name}>Reviews</h3>
+        </button>
+      </div>
       {features ? (
         <Features itemCamper={itemCamper} />
       ) : (
-        <Reviews itemCamper={itemCamper} />
+        <Reviews reviews={itemCamper.reviews} />
       )}
     </div>
   );

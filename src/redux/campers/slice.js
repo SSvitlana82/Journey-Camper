@@ -16,7 +16,13 @@ export const camperSlice = createSlice({
         console.log(action.payload);
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload.data.data;
+        state.items = action.payload.data.data.map((itemCamper) => {
+          itemCamper.details.adults = itemCamper.adults;
+          itemCamper.details.transmission = itemCamper.transmission;
+          itemCamper.details.engine = itemCamper.engine;
+          delete itemCamper.details._id;
+          return itemCamper;
+        });
       })
       .addCase(campersGet.pending, (state, { payload }) => {
         state.isLoading = true;
