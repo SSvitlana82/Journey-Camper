@@ -1,5 +1,4 @@
 import style from "./Vehicle.module.css";
-import { useState } from "react";
 
 const Vehicle = ({ details }) => {
   return (

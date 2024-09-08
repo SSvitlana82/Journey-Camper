@@ -2,7 +2,7 @@
   max-width: 902px;
   margin-top: 10px;
   margin-left: 25px;
-  color: #475467; /* Темно-сірий для тексту опису */
+  color: #475467;
   font-size: 16px;
   line-height: 1.6;
   font-size: 16px;
@@ -13,34 +13,18 @@
 .img {
   margin-right: 10px;
   margin-bottom: 10px;
-  width: 100%; /* Зображення займають всю ширину контейнера */
-  height: auto; /* Зберігаємо пропорції зображення */
-  object-fit: cover; /* Забезпечує, що зображення не буде викривленим і рівномірно займає весь блок */
-  border-radius: 10px; /* Додає закруглені кути до зображень */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .imageContainer {
   display: flex;
-  flex-wrap: wrap; /* Дозволяє зображенням переноситися на наступний рядок, якщо їх багато */
-  gap: 1px; /* Відстань між зображеннями */
+  flex-wrap: wrap;
+  gap: 1px;
   justify-content: space-between;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 902px;
   max-height: 310px;
 }
-
-/* @media (max-width: 768px) {
-  .modal {
-    width: 90%;
-    max-height: 80%;
-  }
-  .scroll {
-    padding: 10px;
-  }
-  .name {
-    font-size: 18px;
-  }
-  .priceBox {
-    font-size: 20px;
-  }
-} */

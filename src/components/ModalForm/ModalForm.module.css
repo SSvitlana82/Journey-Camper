@@ -15,11 +15,11 @@
 
 .modal {
   width: 982px;
-  max-height: 720px;
+
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тінь для модального вікна */
-  overflow: hidden; /* Заборона виходу контенту за межі модального вікна */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .close {
@@ -35,14 +35,13 @@
   flex-direction: column;
   margin: 25px 25px 0 25px;
   gap: 8px;
-  /* padding: 25px; */
 }
 
 .name {
   display: flex;
   width: auto;
   justify-content: space-between;
-  align-items: center; /*додала*/
+  align-items: center;
 }
 
 .btn {
@@ -51,14 +50,13 @@
   background-color: white;
   border: none;
   cursor: pointer;
-  /* padding: 0; */
 }
 
 .info {
   display: flex;
 
   align-items: center;
-  color: #7c7c7c; /* Сірий колір для тексту */
+  color: #7c7c7c;
 }
 
 .priceBox {

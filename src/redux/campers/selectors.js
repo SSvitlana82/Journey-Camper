@@ -7,3 +7,6 @@ export const selectIsLoading = (state) => {
 export const selectError = (state) => {
   return state.campers.error;
 };
+export const selectTotalPages = (state) => {
+  return state.campers.totalPages;
+};

@@ -1,15 +1,15 @@
-import { campersGet } from "../../redux/campers/operations";
 import CheckboxFilter from "../customsComponents/CheckboxFilter/CheckboxFilter";
 import style from "./Filters.module.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Icon from "../Icon/Icon";
+
 import InputLocation from "../customsComponents/InputLocation/InputLocation";
 import Button from "../customsComponents/Button/Button";
+
 const categoriesEquipment = [
   {
     title: "AC",
-    icon: "acCon",
+    icon: "airConditioner",
     id: "airConditioner",
   },
   {
@@ -90,7 +90,7 @@ const categoriesType = [
     id: "alcove",
   },
 ];
-const Filters = ({}) => {
+const Filters = ({ globalParams, setGlobalParams }) => {
   const [selectedCategoriesForm, setSelectedCategoriesForm] = useState([]);
   const [selectedCategoriesDetails, setSelectedCategoriesDetails] = useState(
     []
@@ -125,12 +125,12 @@ const Filters = ({}) => {
   };
 
   const onSearchClick = () => {
-    const data = {
-      selectedCategoriesForm,
-      selectedCategoriesDetails,
+    setGlobalParams({
       location,
-    };
-    dispatch(campersGet(data));
+      selectedCategoriesDetails,
+      selectedCategoriesForm,
+      page: 1,
+    });
   };
   return (
     <div className={style.container}>
@@ -141,10 +141,10 @@ const Filters = ({}) => {
       <p className={style.filter}>Filters</p>
       <div className={style.filterCategory}>
         <h3 className={style.nameFilter}>Vehicle equipment</h3>
+        <div className={style.line}></div>
         <ul className={style.listF}>
           {categoriesEquipment.map((category, i) => {
             const isActive = selectedCategoriesDetails.some((el) => {
-              console.log(el, category);
               return el === category.id;
             });
 
@@ -162,8 +162,9 @@ const Filters = ({}) => {
           })}
         </ul>
       </div>
-      <div className={style.filterCategory}>
+      <div className={style.filterType}>
         <h3 className={style.nameFilter}>Vehicle type</h3>
+        <div className={style.line}></div>
         <ul className={style.listF}>
           {categoriesType.map((category, i) => {
             const isActive = selectedCategoriesForm.some(
@@ -183,7 +184,9 @@ const Filters = ({}) => {
           })}
         </ul>
       </div>
-      <Button onClick={onSearchClick}>Search</Button>
+      <div className={style.btn}>
+        <Button onClick={onSearchClick}>Search</Button>
+      </div>
     </div>
   );
 };

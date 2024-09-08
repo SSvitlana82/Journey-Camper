@@ -1,10 +1,10 @@
 .cardMain {
   display: flex;
   flex-direction: row;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
   width: 888px;
   height: 358px;
   padding: 24px 24px;
@@ -21,11 +21,6 @@
   border-radius: 10px;
 }
 
-/* .cardContainer {
-  display: flex;
-  flex-direction: row;
-} */
-
 .image {
   height: 310px;
 
@@ -35,9 +30,10 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
   width: 526px;
   height: 310px;
+  justify-content: space-around;
 }
 .title {
   display: flex;
@@ -53,22 +49,31 @@
   font-weight: 600;
   margin: 0;
   line-height: 125%;
-  color: #101828;
+  color: rgba(16, 24, 40, 1);
 }
 
 .price {
   font-size: 18px;
   font-weight: 700;
-  color: #333333;
-  margin: 0;
+  color: rgba(16, 24, 40, 1);
 }
 
 .iconHeart {
   width: 24px;
   height: 24px;
-  fill: #ff5a5f;
-  stroke: #f5a623;
+  fill: rgba(228, 72, 72, 1);
+  border: none;
   color: black;
+  stroke: rgba(228, 72, 72, 1);
+}
+
+.deActive {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: rgba(16, 24, 40, 1);
+  color: black;
+  border: none;
 }
 .block {
   display: flex;
@@ -80,27 +85,44 @@
   cursor: pointer;
   padding: 0;
 }
+.favoriteButton:focus {
+  outline: none;
+}
 
 .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
   align-items: center;
   margin: 8px 0;
+  width: 280px;
+  height: 24px;
 }
 
 .rating {
   display: flex;
   align-items: center;
+  width: 133px;
+  height: 24px;
+  justify-content: space-around;
+  color: rgba(16, 24, 40, 1);
 }
 
 .starIcon {
-  color: #f5a623;
+  color: rgba(255, 197, 49, 1);
   margin-right: 4px;
+  fill: rgba(255, 197, 49, 1);
+  align-self: center;
 }
 
 .location {
-  font-size: 14px;
-  color: #888888;
+  display: flex;
+  font-size: 16px;
+  color: rgba(16, 24, 40, 1);
+
+  height: 24px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .textContainer {
@@ -109,6 +131,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
+  margin-bottom: 10px;
 }
 .features {
   display: flex;
@@ -122,4 +145,21 @@
   background-color: #f0f0f0;
   padding: 4px 8px;
   border-radius: 4px;
+}
+.iconLocation {
+  fill: none;
+  stroke: black;
+}
+
+.btnMore {
+  width: 173px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 500px;
+}
+
+.conteyner {
+  width: 526px;
+  height: 62px;
+  margin-bottom: 10px;
 }

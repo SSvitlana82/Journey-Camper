@@ -5,11 +5,11 @@
   box-shadow: 0 1px 10px rgba(16, 24, 40, 0.2);
   max-width: 400px;
   min-width: 400px;
-  /* margin: 0px 25px 0 25px; */
+
   gap: 24px;
+  height: 532px;
 }
 
-/* Заголовок форми */
 .title {
   font-size: 20px;
   font-weight: 600;
@@ -19,7 +19,6 @@
   color: #101828;
 }
 
-/* Описовий текст */
 .text {
   font-size: 14px;
   color: #475467;
@@ -27,14 +26,12 @@
   margin-bottom: 20px;
 }
 
-/* Контейнер форми */
 .formContainer {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-/* Стилі для полів вводу */
 .field input,
 .field .ant-input,
 .field .ant-picker {
@@ -54,14 +51,13 @@
 .input {
   background-color: rgba(247, 247, 247, 1);
 }
-/* Стиль для текстової області (textarea) */
+
 .field .ant-input-textarea {
   height: 106px;
   resize: none;
   background-color: rgba(247, 247, 247, 1);
 }
 
-/* При наведені курсора та фокусі змінюємо колір рамки */
 .field input:focus,
 .field .ant-input:focus,
 .field .ant-picker:focus {
@@ -70,12 +66,10 @@
   color: rgba(16, 24, 40, 1);
 }
 
-/* Помилки вводу */
 .error {
   border-color: #e53935;
 }
 
-/* Повідомлення про помилки */
 .errorMessage {
   color: #e53935;
   font-size: 12px;
@@ -83,7 +77,6 @@
   display: block;
 }
 
-/* Кнопка відправки */
 .btn {
   background-color: rgba(228, 72, 72, 1);
   color: #fff;
@@ -97,12 +90,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Зміна кольору кнопки при наведенні */
 .field .ant-btn:hover {
   background-color: rgba(216, 67, 67, 1);
 }
 
-/* Загальні стилі для всіх полів */
 .field {
   display: flex;
   flex-direction: column;

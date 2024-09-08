@@ -1,6 +1,8 @@
 .container {
   display: flex;
+  flex-direction: column;
   flex-wrap: row;
+  align-items: center;
 }
 .listContainer {
   display: flex;
@@ -8,5 +10,14 @@
   list-style: none;
   gap: 24px;
 }
-.itemContainer {
+
+.btn {
+  width: 145px;
+  height: 56px;
+  border-radius: 200px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+
+  color: rgba(16, 24, 40, 1);
+  font-size: 16px;
+  font-weight: 500px;
 }

@@ -4,12 +4,6 @@ import { Input } from "antd";
 import { useState } from "react";
 const { TextArea } = Input;
 const BookForm = ({}) => {
-  /* const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    bookingDate: "",
-    comment: "",
-  }); */
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [bookingDate, setBookingDate] = useState("");

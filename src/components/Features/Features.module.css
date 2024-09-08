@@ -10,30 +10,39 @@
 .section {
   display: inline-block;
   max-width: 430px;
-  /*flex: 1 1 calc(33.33% - 10px); в рядку 3 зображення*/
+
   height: auto;
   gap: 40px;
 }
 .flex {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: left;
   min-width: 430px;
-  height: 200px;
+
   left: 0px;
   gap: 3px;
 }
 .vehicleBox {
-  padding-top: 40px;
-  height: 326px;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 44px;
+  width: 430px;
+  height: 286px;
 }
 .vehicle {
   font-size: 20px;
   font-weight: 600;
   color: rgba(16, 24, 40, 1);
   display: flex;
-
-  margin-bottom: 40px;
   height: 24px;
+}
+.line {
+  width: 430px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  margin-top: 23px;
+  margin-bottom: 24px;
 }

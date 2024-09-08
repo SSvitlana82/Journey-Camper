@@ -10,3 +10,17 @@
   margin-top: 30px;
   margin-bottom: 20px;
 }
+.btnReviws {
+  margin-right: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+}
+
+.line {
+  width: 902px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  margin-top: 36px;
+  margin-bottom: 46px;
+}

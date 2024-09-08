@@ -1,4 +1,5 @@
 import iconSVG from "../../assets/symbol-defs.svg";
+
 const Icon = ({ id, width = 32, height = 32, className = "" }) => {
   return (
     <svg

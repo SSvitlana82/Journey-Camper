@@ -11,12 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px;
-  gap: 2px;
+  margin: 6px 3px;
+  gap: 3px;
   border-radius: 100px;
   border: 1px solid black;
   height: 44px;
-  padding: 0 6px;
+  padding: 0 11px;
   min-width: 88px;
   border: none;
   background-color: rgba(242, 244, 247, 1);

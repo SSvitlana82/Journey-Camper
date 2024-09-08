@@ -1,5 +1,5 @@
 import style from "./Modalnfo.module.css";
-import { useState } from "react";
+
 import React from "react";
 import { Image } from "antd";
 

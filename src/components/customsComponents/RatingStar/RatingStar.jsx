@@ -1,5 +1,4 @@
 import style from "./RatingStar.module.css";
-import { useState } from "react";
 
 import { IoStar } from "react-icons/io5";
 

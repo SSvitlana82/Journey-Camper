@@ -1,29 +1,16 @@
-/* .containerMain {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 64px;
-  margin: 0 auto;
-  width: 1440px;
-} */
-
 .containerMain {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: url("/public/rvland-rus-campers-10-min.png") no-repeat center
-    center/cover; /* Встановлюємо фон */
-  height: 100%; /* Встановлюємо висоту на весь екран */
+    center/cover;
+  height: 100%;
   width: 100%;
   color: #333;
 }
 
 .header {
-  background: rgba(
-    76,
-    175,
-    80,
-    0.8
-  ); /* Додаємо прозорий фон для тексту, щоб він був видимим на фоні */
+  background: rgba(76, 175, 80, 0.8);
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -46,12 +33,7 @@
 .content {
   padding: 20px;
   text-align: center;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Додаємо прозорий білий фон для тексту */
+  background: rgba(255, 255, 255, 0.8);
   max-width: 800px;
   margin: 20px auto;
   border-radius: 10px;

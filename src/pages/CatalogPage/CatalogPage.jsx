@@ -7,17 +7,26 @@ import { selectCampers } from "../../redux/campers/selectors";
 import Filters from "../../components/Filters/Filters";
 
 const CatalogPage = ({}) => {
+  const [globalParams, setGlobalParams] = useState({
+    location: null,
+    selectedCategoriesForm: [],
+    selectedCategoriesDetails: [],
+    page: 1,
+  });
   const dispatch = useDispatch();
-  const arrayCampers = useSelector(selectCampers);
-
   useEffect(() => {
-    dispatch(campersGet());
-  }, []);
+    dispatch(campersGet(globalParams));
+  }, [globalParams]);
+  const arrayCampers = useSelector(selectCampers);
 
   return (
     <main className={style.containerMain}>
-      <Filters />
-      <CamperList array={arrayCampers} />
+      <Filters globalParams={globalParams} setGlobalParams={setGlobalParams} />
+      <CamperList
+        globalParams={globalParams}
+        array={arrayCampers}
+        setGlobalParams={setGlobalParams}
+      />
     </main>
   );
 };

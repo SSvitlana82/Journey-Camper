@@ -10,6 +10,7 @@ const ModalDescription = ({ itemCamper }) => {
     <div>
       <div className={style.conteiner}>
         <button
+          className={style.btnFeatures}
           onClick={() => {
             setFeatures(true);
           }}
@@ -17,6 +18,7 @@ const ModalDescription = ({ itemCamper }) => {
           <h3 className={style.name}>Features</h3>
         </button>
         <button
+          className={style.btnReviws}
           onClick={() => {
             setFeatures(false);
           }}
@@ -24,6 +26,7 @@ const ModalDescription = ({ itemCamper }) => {
           <h3 className={style.name}>Reviews</h3>
         </button>
       </div>
+      <hr className={style.line}></hr>
       {features ? (
         <Features itemCamper={itemCamper} />
       ) : (
